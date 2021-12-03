@@ -1,0 +1,41 @@
+*{
+
+}
+body{
+    color: #F3F4F6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+    background-color: #374151;
+}
+#bill-amount{
+    text-align: center;
+    padding: 0.5rem;
+    width: 80%;
+    margin: auto;
+}
+#cash-given{
+    text-align: center;
+    padding: 0.5rem; 
+    width: 80%;
+    margin: auto;
+}
+#check-button{
+    width: 30%;
+    margin: auto;
+    padding: 0.1rem ;
+    margin-top: 0.5rem;
+}
+.change-table{
+    padding: 1rem;
+    border-collapse: collapse;
+}
+th,td{
+    border: 1px solid white;
+    
+}
