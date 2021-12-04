@@ -28,7 +28,7 @@ function calculateChange(amountToBeReturned){
         const numberOfNotes = Math.trunc(
             amountToBeReturned/availableNotes[i]
         );
-        if (numberOfNotes >= 0) {
+        if (numberOfNotes > 0) {
             amountToBeReturned=amountToBeReturned%availableNotes[i];
             noOfNotes[i].innerText= numberOfNotes;
         }else{
