@@ -9,14 +9,16 @@ var given = cashGiven.value;
 var bill = billAmount.value;
 
 checkButton.addEventListener("click",function validateAmount() {
-    message.style.display = "none";
+    
     if (billAmount.value > 0) {
-        if ((given >= bill)){
+        console.log(billAmount.value);
+        if ((given>=bill)){
+            console.log(cashGiven.value,billAmount.value)
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
-
+        
         }else{
-            errorHandler("The cash provided should atleast be equal to the bill amount");
+            errorHandler("1The cash provided should atleast be equal to the bill amount");
         }
     }else {
          errorHandler("Invalid bill amount");
@@ -26,22 +28,26 @@ checkButton.addEventListener("click",function validateAmount() {
 function calculateChange(amountToBeReturned){
     for(let i=0; i<availableNotes.length; i++){
         const numberOfNotes = Math.trunc(
-            amountToBeReturned/availableNotes[i]
-        );
-        if (numberOfNotes > 0) {
+            amountToBeReturned/availableNotes[i]);
             amountToBeReturned=amountToBeReturned%availableNotes[i];
+        if (numberOfNotes > 0) {
+
             noOfNotes[i].innerText= numberOfNotes;
-        }else{
-            errorHandler("The cash provided should atleast be equal to the bill amount");
         }
+        
     };
 };
 
-
+function neutrilize(returnNone){
+    message.style.display = "block";
+    message.innerText=returnNone;
+    console.log(returnNone);
+}
 
 function errorHandler(returnMessage) {
 
     message.style.display = "block";
     message.innerText= returnMessage;
+    console.log(returnMessage);
     
 };
