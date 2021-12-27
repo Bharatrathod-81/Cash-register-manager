@@ -1,5 +1,5 @@
-*{
-
+html{
+    font-size: 62.5%;
 }
 body{
     color: #F3F4F6;
@@ -36,6 +36,10 @@ body{
     border-collapse: collapse;
 }
 th,td{
-    border: 1px solid white;
-    
+    border: 1px solid white;   
+}
+@media(max-width:360px){
+    html{
+        font-size: 75%
+    }
 }
